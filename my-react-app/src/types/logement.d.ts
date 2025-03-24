@@ -1,22 +1,21 @@
-type Host = {
-    name: string;
-    picture: string;
-  };
-  
-  type Logement = {
+// Export the type
+export type Logement = {
     id: string;
     title: string;
     cover: string;
     pictures: string[];
     description: string;
-    host: Host;
-    rating: number;
+    host: {
+      name: string;
+      picture: string;
+    };
+    rating: string;
     location: string;
     equipments: string[];
     tags: string[];
   };
   
-  // For JSON module support (optional but recommended)
+  // Optional: Keep JSON module declaration
   declare module "*.json" {
     const value: Logement[];
     export default value;
