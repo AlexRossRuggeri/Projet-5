@@ -17,7 +17,7 @@ function Card({ logement }: CardProps) {
         className="card__cover"
         style={{ backgroundImage: `url(${logement.cover})` }}
       >
-        <div className="card__overlay" />
+        {/* <div className="card__overlay" /> */}
         <h3 className="card__title">{logement.title}</h3>
       </div>
     </article>
