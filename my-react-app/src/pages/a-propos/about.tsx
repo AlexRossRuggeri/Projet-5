@@ -1,9 +1,12 @@
+import Banner from "../../components/logements/banner/Banner";
+import AboutBanner from "../../assets/banner-about.webp";
+
 function About() {
-    return (
-        <div>
-            <h1>A Propos</h1>
-        </div>
-    )
+  return (
+    <>
+      <Banner imageUrl={AboutBanner} showOverlay overlayVariant="light" />
+    </>
+  );
 }
 
-export default About
+export default About;
