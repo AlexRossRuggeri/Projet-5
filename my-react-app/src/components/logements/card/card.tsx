@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Card.scss";
 
 interface Logement {
@@ -12,15 +13,14 @@ interface CardProps {
 
 function Card({ logement }: CardProps) {
   return (
-    <article className="card">
+    <Link to="/fiche-logement" className="card">
       <div
         className="card__cover"
         style={{ backgroundImage: `url(${logement.cover})` }}
       >
-        {/* <div className="card__overlay" /> */}
         <h3 className="card__title">{logement.title}</h3>
       </div>
-    </article>
+    </Link>
   );
 }
 
