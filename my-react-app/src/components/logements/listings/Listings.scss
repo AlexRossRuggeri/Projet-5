@@ -2,15 +2,24 @@
   background-color: #f6f6f6;
   border-radius: 25px;
   height: auto;
-  padding: 56px 50px 43px 50px;
+  padding: 31px 25px 18px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    background-color: unset;
+    padding: 0;
+  }
 }
 
 .listings__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
