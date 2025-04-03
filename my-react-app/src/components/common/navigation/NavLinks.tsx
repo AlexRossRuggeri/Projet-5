@@ -3,7 +3,7 @@ import "./NavLinks.scss";
 
 function NavLinks() {
   return (
-    <nav>
+    <nav className="navigation">
       <Link to="/">Accueil</Link>
       <Link to="/a-propos">A propos</Link>
     </nav>
