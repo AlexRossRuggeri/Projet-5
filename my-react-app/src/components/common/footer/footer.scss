@@ -1,4 +1,4 @@
-footer {
+.footer {
   background-color: black;
   color: white;
   display: flex;
@@ -8,13 +8,22 @@ footer {
   padding: 66px 0 29px 0;
   gap: 25px;
 
-  .kasa-logo {
+  &__logo {
     filter: brightness(0) invert(1);
     width: 122px;
     height: auto;
   }
 
-  p {
+  &__text {
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 66px 0 58px 0;
+
+    &__text {
+      max-width: 135px;
+      flex-wrap: wrap;
+    }
   }
 }
