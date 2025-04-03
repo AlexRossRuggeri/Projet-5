@@ -1,0 +1,11 @@
+.about {
+  margin: 50px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+
+  @media (max-width: 786px) {
+    margin: 27px 20px;
+    gap: 22px;
+  }
+}
