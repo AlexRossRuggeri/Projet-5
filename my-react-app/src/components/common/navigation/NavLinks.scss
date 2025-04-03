@@ -1,21 +1,24 @@
-nav {
+.navigation {
   font-family: "Montserrat";
   font-size: 24px;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
   gap: 69px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    gap: 20px;
+    text-transform: uppercase;
+  }
 }
 
 a {
   text-decoration: none;
   color: black;
-}
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
