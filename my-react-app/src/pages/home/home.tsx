@@ -6,7 +6,7 @@ import "./Home.scss";
 
 function Home() {
   return (
-    <main className="homepage">
+    <>
       <Banner
         title="Chez vous, partout et ailleurs"
         imageUrl={HomeBanner}
@@ -14,7 +14,7 @@ function Home() {
         overlayVariant="dark"
       />
       <Listings />
-    </main>
+    </>
   );
 }
 
