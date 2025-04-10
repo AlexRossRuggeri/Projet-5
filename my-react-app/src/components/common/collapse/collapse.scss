@@ -1,0 +1,23 @@
+.collapse-button {
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 52px;
+  background-color: #ff6060;
+  color: #ffff;
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 20px;
+  cursor: pointer;
+}
+
+.collapse-content {
+  padding: 20px;
+  font-size: 18px;
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+}
