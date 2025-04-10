@@ -1,9 +1,22 @@
 :root {
-  font-family: "Montserrat", system-ui, "Avenir", Helvetica, Arial, sans-serif;
+  --main-font: "Montserrat", system-ui, "Avenir", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 }
 
 body {
-  margin: 0;
+  font-family: var(--main-font);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+main {
+  margin: 50px 100px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin: 27px 20px;
+    gap: 22px;
+  }
 }
