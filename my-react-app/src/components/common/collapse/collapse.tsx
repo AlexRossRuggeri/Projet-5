@@ -1,29 +1,24 @@
+import { ReactNode } from "react";
 import "./collapse.scss";
 
 interface CollapseProps {
-  id: string;
+  id?: string;
   title: string;
-  content: string;
   isOpen: boolean;
-  onClick: (id: string) => void;
+  onClick: () => void;
+  children: ReactNode;
 }
 
-const Collapse = ({ id, title, content, isOpen, onClick }: CollapseProps) => {
+const Collapse = ({ id, title, isOpen, onClick, children }: CollapseProps) => {
   return (
     <div className="collapse-container" id={`collapse-${id}`}>
-      <button className="collapse-button" onClick={() => onClick(id)}>
+      <button className="collapse-button" onClick={() => onClick()}>
         <span>{title}</span>
-        {isOpen ? (
-          <i className="fa-solid fa-chevron-down" />
-        ) : (
-          <i className="fa-solid fa-chevron-up" />
-        )}
+        <i
+          className={`fa-solid ${isOpen ? "fa-chevron-up" : "fa-chevron-down"}`}
+        />
       </button>
-      {isOpen && (
-        <div id={`content-${id}`} className="collapse-content">
-          {content}
-        </div>
-      )}
+      {isOpen && <div className="collapse-content">{children}</div>}
     </div>
   );
 };
