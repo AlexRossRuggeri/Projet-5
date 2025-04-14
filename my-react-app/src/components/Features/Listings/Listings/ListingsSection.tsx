@@ -1,6 +1,6 @@
-import logements from "../../../data/logements.json";
-import Card from "../card/Card";
-import "./Listings.scss";
+import logements from "../../../../data/listingsData.json";
+import Card from "../Card/Card";
+import "./ListingsSection.scss";
 
 function Listings() {
   return (
