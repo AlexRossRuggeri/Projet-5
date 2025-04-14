@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Collapse from "../common/collapse/collapse";
-import faqItems from "../../data/FAQ.json";
+import Collapse from "../../common/Collapse/collapse";
+import faqItems from "../../../data/FAQData.json";
 import "./FAQSection.scss";
 
 const FAQSection = () => {
@@ -15,12 +15,12 @@ const FAQSection = () => {
       {faqItems.map((item) => (
         <Collapse
           key={item.id}
-          id={item.id}
           title={item.title}
-          content={item.content}
           isOpen={openId === item.id}
           onClick={() => handleToggle(item.id)}
-        />
+        >
+          {item.content}
+        </Collapse>
       ))}
     </div>
   );
