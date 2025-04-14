@@ -1,6 +1,6 @@
-import Banner from "../../components/logements/banner/Banner";
+import Banner from "../../components/Features/Listings/Banner/Banner";
 import HomeBanner from "../../assets/banner-home.webp";
-import Listings from "../../components/logements/listings/Listings";
+import Listings from "../../components/Features/Listings/Listings/ListingsSection";
 
 import "./Home.scss";
 
