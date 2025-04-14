@@ -13,7 +13,7 @@ interface CardProps {
 
 function Card({ logement }: CardProps) {
   return (
-    <Link to="/fiche-logement" className="card">
+    <Link to={`/fiche-logement/${logement.id}`} className="card">
       <div className="card__image-container">
         <img
           src={logement.cover}
