@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/LOGO.svg";
-import NavLinks from "../navigation/NavLinks";
+import NavLinks from "../Navigation/NavLinks";
 import "./Header.scss";
 
 function Header() {
