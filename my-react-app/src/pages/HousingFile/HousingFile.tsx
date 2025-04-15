@@ -5,7 +5,7 @@ import Slideshow from "../../components/common/Slideshow/Slideshow";
 import Collapse from "../../components/common/Collapse/collapse";
 import Profile from "../../components/common/Profile/Profile";
 import Badge from "../../components/common/Badge/Badge";
-import RatingReview from "../../components/common/Ranking/Ranking";
+import StarRating from "../../components/common/Ranking/Ranking";
 
 function FicheLogement() {
   const { id } = useParams();
@@ -30,7 +30,7 @@ function FicheLogement() {
 
       <Badge tags={logement.tags} />
 
-      <RatingReview rating={logement.rating} />
+      <StarRating rating={logement.rating} />
 
       <Collapse
         id="description"

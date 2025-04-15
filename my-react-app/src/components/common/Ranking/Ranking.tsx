@@ -4,7 +4,7 @@ interface RatingProps {
   rating: string;
 }
 
-function RatingReview({ rating }: RatingProps) {
+function StarRating({ rating }: RatingProps) {
   const numericRating = parseInt(rating);
   return (
     <div>
@@ -26,4 +26,4 @@ function RatingReview({ rating }: RatingProps) {
   );
 }
 
-export default RatingReview;
+export default StarRating;
