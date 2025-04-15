@@ -3,6 +3,9 @@ import { useState } from "react";
 import logements from "../../data/listingsData.json";
 import Slideshow from "../../components/common/Slideshow/Slideshow";
 import Collapse from "../../components/common/Collapse/collapse";
+import Profile from "../../components/common/Profile/Profile";
+import Badge from "../../components/common/Badge/Badge";
+import RatingReview from "../../components/common/Ranking/Ranking";
 
 function FicheLogement() {
   const { id } = useParams();
@@ -18,8 +21,17 @@ function FicheLogement() {
   };
 
   return (
-    <div>
+    <>
       <Slideshow images={logement.pictures} />
+      <h1>{logement.title}</h1>
+      <h2>{logement.location}</h2>
+
+      <Profile name={logement.host.name} picture={logement.host.picture} />
+
+      <Badge tags={logement.tags} />
+
+      <RatingReview rating={logement.rating} />
+
       <Collapse
         id="description"
         title="Description"
@@ -41,7 +53,7 @@ function FicheLogement() {
         isOpen={openId === "equipments"}
         onClick={() => handleToggle("equipments")}
       />
-    </div>
+    </>
   );
 }
 
