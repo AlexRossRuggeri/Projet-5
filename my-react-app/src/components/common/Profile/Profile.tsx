@@ -1,14 +1,19 @@
 import "./Profile.scss";
 
 interface profileProps {
-  name: string;
+  firstname: string;
+  lastname: string;
   picture: string;
 }
 
-function Profile({ name, picture }: profileProps) {
+function Profile({ firstname, lastname, picture }: profileProps) {
   return (
     <div className="host-profile">
-      <div className="host-profile__name">{name}</div>
+      <div className="host-profile__name">
+        {firstname}
+        <br />
+        {lastname}
+      </div>
       <img
         src={picture}
         alt={`photo de ${name}`}

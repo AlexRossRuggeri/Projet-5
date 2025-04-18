@@ -13,6 +13,7 @@ function FicheLogement() {
   const { id } = useParams();
   const logement = logements.find((item) => item.id === id);
   const [openId, setOpenId] = useState<string | null>(null);
+  const [firstname, lastname] = logement?.host.name.split(" ") ?? ["", ""];
 
   if (!logement) {
     return <Navigate to="*" />;
@@ -32,7 +33,11 @@ function FicheLogement() {
           <h2 className="housing-file__location">{logement.location}</h2>
         </div>
 
-        <Profile name={logement.host.name} picture={logement.host.picture} />
+        <Profile
+          firstname={firstname}
+          lastname={lastname}
+          picture={logement.host.picture}
+        />
       </div>
 
       <div className="housing-file__meta">
