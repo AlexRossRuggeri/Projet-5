@@ -7,6 +7,8 @@ import Profile from "../../components/common/Profile/Profile";
 import Badge from "../../components/common/Badge/Badge";
 import StarRating from "../../components/common/Ranking/Ranking";
 
+import "./HousingFile.scss";
+
 function FicheLogement() {
   const { id } = useParams();
   const logement = logements.find((item) => item.id === id);
@@ -23,36 +25,45 @@ function FicheLogement() {
   return (
     <>
       <Slideshow images={logement.pictures} />
-      <h1>{logement.title}</h1>
-      <h2>{logement.location}</h2>
 
-      <Profile name={logement.host.name} picture={logement.host.picture} />
+      <div className="housing-file__header">
+        <div className="housing-file__info">
+          <h1 className="housing-file__title">{logement.title}</h1>
+          <h2 className="housing-file__location">{logement.location}</h2>
+        </div>
 
-      <Badge tags={logement.tags} />
+        <Profile name={logement.host.name} picture={logement.host.picture} />
+      </div>
 
-      <StarRating rating={logement.rating} />
+      <div className="housing-file__meta">
+        <Badge tags={logement.tags} />
 
-      <Collapse
-        id="description"
-        title="Description"
-        children={logement.description}
-        isOpen={openId === "description"}
-        onClick={() => handleToggle("description")}
-      />
+        <StarRating rating={logement.rating} />
+      </div>
 
-      <Collapse
-        id="equipments"
-        title="Équipements"
-        children={
-          <ul>
-            {logement.equipments.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        }
-        isOpen={openId === "equipments"}
-        onClick={() => handleToggle("equipments")}
-      />
+      <div className="housing-file__details">
+        <Collapse
+          id="description"
+          title="Description"
+          children={logement.description}
+          isOpen={openId === "description"}
+          onClick={() => handleToggle("description")}
+        />
+
+        <Collapse
+          id="equipments"
+          title="Équipements"
+          children={
+            <ul>
+              {logement.equipments.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          }
+          isOpen={openId === "equipments"}
+          onClick={() => handleToggle("equipments")}
+        />
+      </div>
     </>
   );
 }
