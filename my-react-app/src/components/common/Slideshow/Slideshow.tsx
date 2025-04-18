@@ -31,7 +31,11 @@ function Slideshow({ images }: SlideshowProps) {
           }`}</div>
         </>
       )}
-      <img src={images[currentImage]} alt={`Slide ${currentImage}`} />
+      <img
+        className="slideshow__picture"
+        src={images[currentImage]}
+        alt={`Slide ${currentImage}`}
+      />
     </div>
   );
 }
