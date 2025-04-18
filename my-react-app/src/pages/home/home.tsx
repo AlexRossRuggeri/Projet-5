@@ -2,8 +2,6 @@ import Banner from "../../components/common/Banner/Banner";
 import HomeBanner from "../../assets/banner-home.webp";
 import Listings from "../../components/Features/Listings/Listings/ListingsSection";
 
-import "./Home.scss";
-
 function Home() {
   return (
     <>
