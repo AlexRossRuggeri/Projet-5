@@ -15,7 +15,9 @@ const Collapse = ({ id, title, isOpen, onClick, children }: CollapseProps) => {
       <button className="collapse-button" onClick={() => onClick()}>
         <span>{title}</span>
         <i
-          className={`fa-solid ${isOpen ? "fa-chevron-up" : "fa-chevron-down"}`}
+          className={`collapse-icon fa-solid fa-chevron-up ${
+            isOpen ? "collapse-icon--rotated" : ""
+          }`}
         />
       </button>
       {isOpen && <div className="collapse-content">{children}</div>}
