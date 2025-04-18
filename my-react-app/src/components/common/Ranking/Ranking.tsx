@@ -7,15 +7,14 @@ interface RatingProps {
 function StarRating({ rating }: RatingProps) {
   const numericRating = parseInt(rating);
   return (
-    <div>
+    <div className="star-rating">
       {[1, 2, 3, 4, 5].map((star) => {
         return (
           <span
-            className="star"
-            style={{
-              color: numericRating >= star ? "#FF6060" : "#E3E3E3",
-              fontSize: `35px`,
-            }}
+            key={star}
+            className={`star-rating__star star-rating__star--${
+              numericRating >= star ? "filled" : "empty"
+            }`}
           >
             {" "}
             <i className="fa-solid fa-star" />{" "}

@@ -1,0 +1,17 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__star {
+    font-size: 35px;
+
+    &--filled {
+      color: #ff6060;
+    }
+
+    &--empty {
+      color: #e3e3e3;
+    }
+  }
+}
