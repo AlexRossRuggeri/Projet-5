@@ -1,7 +1,9 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
 .about {
-  margin: 50px 100px 50px 100px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
+  margin: 50px 100px;
   gap: 43px;
 
   @media (max-width: 786px) {
