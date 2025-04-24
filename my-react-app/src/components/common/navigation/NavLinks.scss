@@ -1,12 +1,14 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
 .navigation {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: $font-size-md;
   display: flex;
   justify-content: space-between;
   gap: 69px;
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: $font-size-xxs;
     gap: 20px;
     text-transform: uppercase;
   }
