@@ -1,18 +1,30 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
 .host-profile {
   display: flex;
   align-items: center;
   gap: 10px;
 
   &__name {
-    font-size: 18px;
-    color: #ff6060;
+    font-size: $font-size-sm;
+    color: $primary-color;
     line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: $font-size-xxs;
+    }
   }
 
   &__picture {
     width: 64px;
     height: 64px;
-    border-radius: 50px;
+    border-radius: $border-radius-circle;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
