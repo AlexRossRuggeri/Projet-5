@@ -1,22 +1,44 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
 .error-section {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: center;
   gap: 139px;
-  padding: 89px 0 89px 0;
+  padding: 89px 0;
+
+  @media (max-width: 786px) {
+    gap: 113px;
+    text-align: center;
+    padding: 86px 0;
+  }
 
   &__title {
-    font-size: 288px;
+    font-size: $font-size-largest;
     margin: 0;
-    color: #ff6060;
+    color: $primary-color;
+
+    @media (max-width: 786px) {
+      font-size: $font-size-xxxl;
+    }
   }
+
   &__text {
     margin: 0;
-    font-size: 32px;
-    color: #ff6060;
+    font-size: $font-size-lg;
+    color: $primary-color;
+
+    @media (max-width: 786px) {
+      font-size: $font-size-xs;
+    }
   }
+
   &__link {
-    font-size: 18px;
+    font-size: $font-size-sm;
     text-decoration: underline;
+
+    @media (max-width: 786px) {
+      font-size: 14px;
+    }
   }
 }
