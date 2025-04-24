@@ -27,23 +27,25 @@ function FicheLogement() {
     <>
       <Slideshow images={logement.pictures} />
 
-      <div className="housing-file__header">
-        <div className="housing-file__info">
-          <h1 className="housing-file__title">{logement.title}</h1>
-          <h2 className="housing-file__location">{logement.location}</h2>
+      <div className="housing-file">
+        <div className="housing-file__header">
+          <div className="housing-file__info">
+            <h1 className="housing-file__title">{logement.title}</h1>
+            <h2 className="housing-file__location">{logement.location}</h2>
+          </div>
+
+          <Badge tags={logement.tags} />
         </div>
 
-        <Profile
-          firstname={firstname}
-          lastname={lastname}
-          picture={logement.host.picture}
-        />
-      </div>
+        <div className="housing-file__meta">
+          <Profile
+            firstname={firstname}
+            lastname={lastname}
+            picture={logement.host.picture}
+          />
 
-      <div className="housing-file__meta">
-        <Badge tags={logement.tags} />
-
-        <StarRating rating={logement.rating} />
+          <StarRating rating={logement.rating} />
+        </div>
       </div>
 
       <div className="housing-file__details">
@@ -59,9 +61,11 @@ function FicheLogement() {
           id="equipments"
           title="Équipements"
           children={
-            <ul>
+            <ul className="housing-file__equipment-list">
               {logement.equipments.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li className="housing-file__equipment-item" key={index}>
+                  {item}
+                </li>
               ))}
             </ul>
           }
