@@ -1,3 +1,6 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
 .star-rating {
   display: flex;
   align-items: center;
@@ -7,11 +10,15 @@
     font-size: 35px;
 
     &--filled {
-      color: #ff6060;
+      color: $primary-color;
     }
 
     &--empty {
-      color: #e3e3e3;
+      color: $dark-grey;
+    }
+
+    @media (max-width: 768px) {
+      font-size: $font-size-sm;
     }
   }
 }
