@@ -7,13 +7,29 @@ interface SlideshowProps {
 
 function Slideshow({ images }: SlideshowProps) {
   const [currentImage, setCurrentImage] = useState(0);
+  const [fadeState, setFadeState] = useState<"fade-in" | "fade-out">("fade-in");
+
+  //     setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  //   };
 
   const nextSlide = () => {
-    setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setFadeState("fade-out");
+    setTimeout(() => {
+      setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      setFadeState("fade-in");
+    }, 300);
   };
 
+  //   const prevSlide = () => {
+  //     setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  //   };
+
   const prevSlide = () => {
-    setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setFadeState("fade-out");
+    setTimeout(() => {
+      setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+      setFadeState("fade-in");
+    }, 300);
   };
 
   return (
@@ -32,7 +48,7 @@ function Slideshow({ images }: SlideshowProps) {
         </>
       )}
       <img
-        className="slideshow__picture"
+        className={`slideshow__picture ${fadeState}`}
         src={images[currentImage]}
         alt={`Slide ${currentImage}`}
       />
