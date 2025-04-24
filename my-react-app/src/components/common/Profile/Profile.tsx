@@ -16,7 +16,7 @@ function Profile({ firstname, lastname, picture }: profileProps) {
       </div>
       <img
         src={picture}
-        alt={`photo de ${name}`}
+        alt={`photo de ${firstname}${lastname}`}
         className="host-profile__picture"
       />
     </div>
