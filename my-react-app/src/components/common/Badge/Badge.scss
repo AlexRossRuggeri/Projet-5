@@ -1,19 +1,31 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
 .badge {
   &__list {
     display: flex;
     gap: 10px;
     padding: 0;
     margin: 20px 0;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      margin: 10px 0;
+    }
   }
 
   &__item {
+    @include flex-center;
     list-style: none;
-    background-color: #ff6060;
-    color: white;
-    border-radius: 10px;
-    padding: 2px 30px 3px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: $primary-color;
+    color: $white;
+    border-radius: $border-radius-sm;
+    padding: 2px 30px 3px;
+    cursor: default;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      height: 18px;
+    }
   }
 }
