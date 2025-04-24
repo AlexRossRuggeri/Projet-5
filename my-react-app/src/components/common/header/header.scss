@@ -1,8 +1,10 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
 header {
-  display: flex;
-  justify-content: space-between;
+  @include flex-space-between;
   align-items: center;
-  padding: 45px 100px 0 100px;
+  padding: 45px 100px 0;
 
   @media (max-width: 768px) {
     padding: 20px 20px 0 20px;
