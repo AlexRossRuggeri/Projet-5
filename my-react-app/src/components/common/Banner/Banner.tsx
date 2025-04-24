@@ -7,7 +7,7 @@ interface BannerProps {
   overlayVariant?: "light" | "dark";
 }
 
-const Banner = ({ title, imageUrl, overlayVariant = "dark" }: BannerProps) => {
+const Banner = ({ title, imageUrl, overlayVariant }: BannerProps) => {
   return (
     <div
       className="banner"
