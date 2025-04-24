@@ -20,7 +20,11 @@ const Collapse = ({ id, title, isOpen, onClick, children }: CollapseProps) => {
           }`}
         />
       </button>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      <div
+        className={`collapse-content ${isOpen ? "collapse-content--open" : ""}`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

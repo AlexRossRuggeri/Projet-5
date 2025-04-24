@@ -1,24 +1,30 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
 .collapse-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   width: 100%;
 }
 
 .collapse-button {
-  border-radius: 5px;
+  font-family: $font-main;
+  @include flex-space-between;
+  align-items: center;
+  border-radius: $border-radius-xs;
   border: none;
   width: 100%;
   height: 52px;
-  background-color: #ff6060;
-  color: #ffff;
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: $primary-color;
+  color: $white;
+  font-size: $font-size-md;
   padding: 0 15px 0 20px;
   cursor: pointer;
+
+  @media (max-width: 786px) {
+    height: 30px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
 }
 
 .collapse-icon {
@@ -30,8 +36,25 @@
 }
 
 .collapse-content {
-  padding: 20px;
-  font-size: 18px;
-  background: #f6f6f6;
+  @include closed;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out 0.1s,
+    padding 0.4s ease-in-out;
+  background: $light-grey;
   border-radius: 0 0 5px 5px;
+  font-size: $font-size-sm;
+  padding: 0px 20px;
+
+  @media (max-width: 786px) {
+    font-size: $font-size-xxs;
+    padding: 0px 20px;
+  }
+
+  &--open {
+    @include open;
+    padding: 20px;
+
+    @media (max-width: 786px) {
+      padding: 10px 20px;
+    }
+  }
 }
