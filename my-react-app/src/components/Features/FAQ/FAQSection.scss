@@ -1,11 +1,14 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/variables" as *;
+
 .faq-section {
+  @include flex-column;
   margin: 38px 100px 0 100px;
-  display: flex;
   justify-content: center;
   gap: 30px;
-  flex-direction: column;
 
   @media (max-width: 768px) {
     margin: 0;
+    gap: 20px;
   }
 }
