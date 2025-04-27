@@ -9,9 +9,6 @@ function Slideshow({ images }: SlideshowProps) {
   const [currentImage, setCurrentImage] = useState(0);
   const [fadeState, setFadeState] = useState<"fade-in" | "fade-out">("fade-in");
 
-  //     setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  //   };
-
   const nextSlide = () => {
     setFadeState("fade-out");
     setTimeout(() => {
@@ -19,10 +16,6 @@ function Slideshow({ images }: SlideshowProps) {
       setFadeState("fade-in");
     }, 300);
   };
-
-  //   const prevSlide = () => {
-  //     setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  //   };
 
   const prevSlide = () => {
     setFadeState("fade-out");
