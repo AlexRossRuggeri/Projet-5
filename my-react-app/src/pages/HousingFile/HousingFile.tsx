@@ -2,7 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { useState } from "react";
 import logements from "../../data/listingsData.json";
 import Slideshow from "../../components/common/Slideshow/Slideshow";
-import Collapse from "../../components/common/Collapse/collapse";
+import Collapse from "../../components/common/Collapse/Collapse";
 import Profile from "../../components/common/Profile/Profile";
 import Badge from "../../components/common/Badge/Badge";
 import StarRating from "../../components/common/Ranking/Ranking";

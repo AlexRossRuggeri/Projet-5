@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Collapse from "../../common/Collapse/collapse";
+import Collapse from "../../common/Collapse/Collapse";
 import faqItems from "../../../data/FAQData.json";
 import "./FAQSection.scss";
 

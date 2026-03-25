@@ -1,6 +1,6 @@
 import Banner from "../../components/common/Banner/Banner";
 import AboutBanner from "../../assets/banner-about.webp";
-import FAQSection from "../../components/Features/FAQ/FAQSection";
+import FAQSection from "../../components/features/FAQ/FAQSection";
 
 import "./About.scss";
 

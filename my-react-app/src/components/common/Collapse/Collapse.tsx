@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import "./collapse.scss";
+import "./Collapse.scss";
 
 interface CollapseProps {
   id?: string;
