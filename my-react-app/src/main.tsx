@@ -8,7 +8,7 @@ import Error from "./pages/Error/Error";
 import About from "./pages/About/About";
 import FicheLogement from "./pages/HousingFile/HousingFile";
 
-import "./Main.scss";
+import "./main.scss";
 
 const root = createRoot(document.getElementById("root")!);
 root.render(
